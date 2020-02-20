@@ -34,8 +34,8 @@ namespace AutomationTask
         [Test]
         public void ExecuteUploadTest()
         {
-            MainPage mainPage = new MainPage();
-            UploadPage uploadPage = mainPage.GotoFileUpload();
+            var mainPage = new MainPage();
+            var uploadPage = mainPage.GotoFileUpload();
             Console.WriteLine("Navigated to File Upload  Page");
 
 
@@ -56,8 +56,8 @@ namespace AutomationTask
         [Test]
         public void ExecuteImagePositionTest()
         {
-            MainPage mainPage = new MainPage();
-            ShiftingContent shiftingContent = mainPage.GotoShiftingContent();
+            var mainPage = new MainPage();
+            var shiftingContent = mainPage.GotoShiftingContent();
             Console.WriteLine("Navigated to Shifting Content");
 
             shiftingContent.GotoImages();
@@ -65,7 +65,7 @@ namespace AutomationTask
 
 
             //get coordinates of image before click link
-            IWebElement image = TestTools.driver.FindElement(By.CssSelector("img[class='shift']"));
+            var image = TestTools.driver.FindElement(By.CssSelector("img[class='shift']"));
 
             var oldPosition = image.Location;
 
@@ -84,8 +84,8 @@ namespace AutomationTask
         [Test]
         public void ExecuteHoverTest()
         {
-            MainPage mainPage = new MainPage();
-            ShiftingContent shiftingContent = mainPage.GotoShiftingContent();
+            var mainPage = new MainPage();
+            var shiftingContent = mainPage.GotoShiftingContent();
             Console.WriteLine("Navigated to Shifting Content");
 
             shiftingContent.GotoMenuElement();

@@ -22,10 +22,7 @@ namespace AutomationTask.Pages
         }
 
 
-        public void Open()
-        {
-            HelperClass.OpenPage(BaseURL);
-        }
+       
 
         public UploadPage GotoFileUpload()
         {
